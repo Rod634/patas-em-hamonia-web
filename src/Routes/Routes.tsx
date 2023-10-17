@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from "../App";
 import { Home } from "../pages/homePage";
 import { AnimalForm } from "../pages/AnimalFormPage";
 import { Animals } from "../pages/AnimalsPage";

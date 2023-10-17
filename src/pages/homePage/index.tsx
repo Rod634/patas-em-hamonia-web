@@ -1,4 +1,4 @@
-import * as React from 'react';
+import Header from '../../components/Header';
 
 interface IHomeProps {
 }
@@ -6,7 +6,7 @@ interface IHomeProps {
 export function Home () {
   return (
     <div>
-      <h1>home</h1>
+      <Header></Header>
     </div>
   );
 }
