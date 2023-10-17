@@ -7,6 +7,9 @@ export function Home () {
   return (
     <div>
       <Header></Header>
+      <body>
+        
+      </body>
     </div>
   );
 }

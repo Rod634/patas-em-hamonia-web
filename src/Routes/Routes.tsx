@@ -15,8 +15,8 @@ export const router = createBrowserRouter([
     { path: "animal/:id", element: <Animals /> },
     { path: "ong-form", element: <OngForm /> },
     { path: "ong/:id", element: <Ongs /> },
-    { path: "schedule", element: <Schedule /> },
-    { path: "profile", element: <Profile /> },
-    { path: "sign-up", element: <SignUp /> },
+    { path: "agendar", element: <Schedule /> },
+    { path: "perfil", element: <Profile /> },
+    { path: "cadastro", element: <SignUp /> },
     { path: "login", element: <Login /> },
 ]);

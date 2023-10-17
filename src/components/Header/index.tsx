@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import '../../assets/globalStyle.css'
 import '../Header/style.css'
 
@@ -8,16 +9,16 @@ export default function Header({}: Props) {
     <div className='header'>
         <div className='section-one'>
             <img src='logo.png'/>
-            <h3>Patas em Harmonia</h3>
+            <h1>Patas em Harmonia</h1>
         </div>
         <div className='section-two'>
             <ul>
-                <li>Castre agora</li>
-                <li>Nossos projetos</li>
-                <li>Nossos animais</li>
-                <li>Perfil</li>
-                <li><img src='default_profile.png'/></li>
+                <li><Link to='/agendar'>Castre agora</Link></li>
+                <li><Link to='/ongs'>Nossos projetos</Link></li>
+                <li><Link to='/animais'>Nossos animais</Link></li>
+                <li><Link to='/perfil'>Perfil</Link></li>
             </ul>
+            <Link to='/perfil'><img src='default_profile.png'/></Link>
         </div>
     </div>
   )

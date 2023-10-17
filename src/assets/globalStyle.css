@@ -1,9 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-/* font-family: 'Inter', sans-serif; */
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Kalam&display=swap');
-/* font-family: 'Inter', sans-serif;
-font-family: 'Kalam', cursive; */
 
 * {
     margin: 0px;
@@ -12,4 +7,5 @@ font-family: 'Kalam', cursive; */
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+    color: #252B5F;
 }

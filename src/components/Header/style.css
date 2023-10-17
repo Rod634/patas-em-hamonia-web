@@ -1,3 +1,55 @@
 .header{
-    
+    background-color: #FEF2DF;
+    width: 100vw;
+    height: 13vh;
+    display: flex;
+}
+
+.section-one{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-left: 5%;
+}
+
+.section-one img{
+    width: 15%;
+    margin-top: 2px;
+}
+
+.section-one h1{
+    font-family: 'Kalam', cursive;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-left: 2%;
+}
+
+.section-two{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+    align-items: center;
+    width: 50%;
+}
+
+.section-two ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 13vh;
+}
+
+.section-two li{
+    padding: 14px;
+}
+
+.section-two a {
+    font-family: 'Kalam';
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.section-two a img{
+    margin-top: 10px;
 }
