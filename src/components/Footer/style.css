@@ -1,0 +1,20 @@
+.container{
+    width: 100vw;
+    height: 35vh;
+    background-color: #FEF2DF;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container img{
+    margin: auto;
+}
+
+.container p{
+    font-family: 'Kalam', cursive;
+    font-weight: bold;
+    margin: auto;
+}
+
+

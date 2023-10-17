@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import '../../assets/globalStyle.css'
-import '../Header/style.css'
+import './style.css'
 
 type Props = {}
 
