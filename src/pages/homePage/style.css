@@ -3,4 +3,154 @@ body{
     height: 100vh;
     overflow-x: hidden;
     background-color: #FF9C75;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-one{
+    margin: auto;
+    width: 75vw;
+    height: 90vh;
+    background-color: #FEF2DF;
+    border-radius: 15px;
+    display: flex;
+    margin-top: 2rem;
+}
+
+.image-box{
+    width: 45%;
+}
+
+.image-box img{
+    padding: 5% 0 5% 5%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: -5%;
+}
+
+.info-box{
+    padding-top: 5%;
+    width: 50%;
+}
+
+.title H1{
+    font-family: 'Kalam', cursive;
+    font-size: 3.27rem;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.title img{
+    position: relative;
+    top: -16px;
+}
+
+.info-title{
+    display: flex;
+    margin: 4rem 0 1.20rem 2rem;
+}
+
+span{
+    color: #F6AC8F;
+}
+
+.info-title img{
+    position: relative;
+    top: -16px;
+}
+
+.info-text{
+    padding-left: 3.3rem;
+    font-weight: 600;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.button{
+    padding: 5rem 0 0 2.5rem;
+}
+
+button{
+    padding: 0.3rem;
+    background-color: #E98676;
+    border-radius: 1rem;
+    border: none;
+    font-family: 'Kalam', cursive;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 40%;
+}
+
+.container-two{
+    width: 75vw;
+    height: 90vh;
+    background-color: #FEF2DF;
+    border-radius: 15px;
+    display: flex;
+    margin: 4rem auto 2rem auto;
+    flex-direction: column;
+}
+
+.box-one {
+    display: flex;
+}
+
+.info-box-one{
+    width: 70%;
+}
+
+.box-one-img{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 3rem 2rem 0 0;
+    margin-left: 3rem;
+}
+
+.box-one-img img{
+    width: 90%;
+    object-fit: cover;
+}
+
+.info-box-one .info-title{
+    margin-bottom: -10px;
+}
+
+.button-one, .button-two{
+    text-align: center;
+}
+
+.button-one button, .button-two button{
+    margin-top: 1.5rem;
+    width: 25%;
+}
+
+.box-two {
+    margin-top: 2rem;
+    display: flex;
+}
+
+.box-two-img{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 3rem 2rem 0 0;
+    margin-left: 3rem;
+}
+
+.info-box-two{
+    width: 70%;
+}
+
+.info-box-two .info-title{
+    justify-content: flex-end;
+    padding-right: 2rem;
+    margin-bottom: -10px;
+}
+
+.info-box-two .info-text{
+   padding-right: 2rem;
 }

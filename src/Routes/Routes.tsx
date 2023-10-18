@@ -12,9 +12,9 @@ import { Login } from "../pages/LoginPage";
 export const router = createBrowserRouter([
     { path: "/", element: <Home />},
     { path: "animal-form", element: <AnimalForm /> },
-    { path: "animal/:id", element: <Animals /> },
+    { path: "animais", element: <Animals /> },
     { path: "ong-form", element: <OngForm /> },
-    { path: "ong/:id", element: <Ongs /> },
+    { path: "ongs", element: <Ongs /> },
     { path: "agendar", element: <Schedule /> },
     { path: "perfil", element: <Profile /> },
     { path: "cadastro", element: <SignUp /> },
