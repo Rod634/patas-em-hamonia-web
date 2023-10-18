@@ -82,6 +82,10 @@ button{
     width: 40%;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 .container-two{
     width: 75vw;
     height: 90vh;
