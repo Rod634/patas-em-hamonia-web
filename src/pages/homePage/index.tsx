@@ -3,7 +3,6 @@ import Header from '../../components/Header';
 import '../../assets/globalStyle.css'
 import './style.css'
 import { Link } from 'react-router-dom';
-import { Schedule } from '../SchedulePage';
 
 export function Home() {
   return (

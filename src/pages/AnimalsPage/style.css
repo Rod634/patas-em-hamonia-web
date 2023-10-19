@@ -1,0 +1,116 @@
+.select-section-container-one{
+    margin: auto;
+    width: 75vw;
+    height: 95vh;
+    background-color: #FEF2DF;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.animal-banner{
+    width: 100%;
+    display: flex;
+}
+
+.animal-banner img{
+    width: 90%;
+    margin: 3rem auto 1rem auto;
+}
+
+.select-section{
+    width: 70%;
+    height: 100%;
+    margin: 0 auto 0 auto;
+}
+
+.select-section-title{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.select-section-title h1{
+    font-family: 'Kalam', cursive;
+    font-size: xxx-large;
+    font-weight: 400;
+    margin-bottom: -1rem;
+}
+
+.select-section-title img{
+   margin-top: -1rem;
+}
+
+.select-section-container{
+    display: flex;
+    justify-content: space-around;
+    height: 80%;
+}
+
+.select-section-container-filter{
+    width: 50%;
+}
+
+.value-filter{
+    width: 100%;
+    height: 100%;
+}
+
+.select-section-container-filter select, .value-filter select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('arrow.png') no-repeat center right #FFF;
+    border: none;
+    font-size: 15px;
+    padding-right: 20px;
+    width: 65%;
+    height: 8%;
+    margin-bottom: 2rem;
+}
+
+.select-section-container-content{
+    width: 50%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 1.25rem;
+    overflow-y: auto;
+}
+
+.select-section-container-content{
+    &::-webkit-scrollbar{
+        background-color: #E98676;
+        width: 0.7rem;
+        border-radius: 1rem;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background-color: #252B5F;
+        border-radius: 1rem;
+    }
+} 
+
+.content{
+    border: 1px solid black;
+    border-radius: 1.19rem;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem 0.3rem 0 1rem;
+    margin-bottom: 10px;
+}
+
+.content span{
+    font-family: 'Kalam', cursive;
+    color: #252B5F;
+}
+
+.content img{
+    width: 30px;
+    position: relative;
+    top: -2px;
+}

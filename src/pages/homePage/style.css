@@ -10,7 +10,7 @@ body{
 .container-one{
     margin: auto;
     width: 75vw;
-    height: 90vh;
+    height: 95vh;
     background-color: #FEF2DF;
     border-radius: 15px;
     display: flex;
@@ -88,7 +88,7 @@ button:hover{
 
 .container-two{
     width: 75vw;
-    height: 90vh;
+    height: 95vh;
     background-color: #FEF2DF;
     border-radius: 15px;
     display: flex;
@@ -132,7 +132,7 @@ button:hover{
 }
 
 .box-two {
-    margin-top: 2rem;
+    margin-top: 4rem;
     display: flex;
 }
 
@@ -142,7 +142,7 @@ button:hover{
     align-items: center;
     justify-content: flex-end;
     padding: 3rem 2rem 0 0;
-    margin-left: 3rem;
+    margin-left: 2rem;
 }
 
 .info-box-two{
