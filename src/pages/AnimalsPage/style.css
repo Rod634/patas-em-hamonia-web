@@ -57,7 +57,7 @@
     height: 100%;
 }
 
-.select-section-container-filter select, .value-filter select {
+select{
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -72,7 +72,7 @@
 
 .select-section-container-content{
     width: 50%;
-    height: 70%;
+    height: 55%;
     display: flex;
     flex-direction: column;
     background-color: #FFF;
@@ -114,3 +114,149 @@
     position: relative;
     top: -2px;
 }
+
+.chart-map-filter{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.6rem;
+}
+
+.chart-map-fields{
+    width: 30%;
+    padding-left: 6%;
+}
+
+.chart-map-fields select{
+    height: 30%
+}
+
+.chart-map-container{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    margin: auto;
+}
+
+.vacinne-map-chart-box{
+    width: 65%;
+    height: 100%;
+}
+
+.chart-disease-status-box{
+    width: 35%;
+    height: 100%;
+}
+
+.vacine-chart-container{
+    height: 45%;
+    width: 100%;
+    background-color: #FFF;
+}
+
+.map-container{
+    width: 100%;
+    height: 48%;
+    margin: 2.5% 0 0 0;
+}
+
+.chart-status-container{
+    width: 100%;
+    height: 100%;
+    margin-left: 1rem;
+}
+
+.status-count-container{
+    width: 100%;
+    height: 25%;
+    background-color: #FFF;
+    display: flex;
+    padding: 10px;
+}
+
+.status-count{
+    width: 33%;
+    text-align: center;
+}
+
+.disease-chart-container{
+    width: 100%;
+    height: 50%;
+    background-color: #FFF;
+    margin-top: 1rem;
+}
+
+.date-chart-container{
+    width: 100%;
+    height: 15%;
+    background-color: #FFF;
+    display: flex;
+    margin: 1rem auto 0 auto;
+
+}
+
+.vacine-chart-container h3, .disease-chart-container h3{
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.date-chart, .chart-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+}
+
+.chart-info h3{
+    color: #848484;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.chart-info p{
+    margin-top: 10px;
+    color: #848484;
+    font-size: 0.7rem;
+}
+
+
+
+
+
+.leaflet-container{
+    height: 100%;
+}
+
+.leaflet-container span{
+    color: #252B5F;
+}
+
+.chart-status-container{
+
+}
+
+.status-count-container{
+
+}
+
+.status-count{
+
+}
+
+.disease-chart-container{
+
+}
+
+.date-chart-container{
+
+}
+
+.date-chart{
+
+}
+
+.chart-info{
+
+}
+
