@@ -153,6 +153,10 @@ select{
     height: 45%;
     width: 100%;
     background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .map-container{
@@ -169,7 +173,7 @@ select{
 
 .status-count-container{
     width: 100%;
-    height: 25%;
+    height: 23%;
     background-color: #FFF;
     display: flex;
     padding: 10px;
@@ -182,9 +186,13 @@ select{
 
 .disease-chart-container{
     width: 100%;
-    height: 50%;
+    height: 70%;
     background-color: #FFF;
     margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .date-chart-container{
@@ -198,7 +206,8 @@ select{
 
 .vacine-chart-container h3, .disease-chart-container h3{
     font-size: 1rem;
-    margin-left: 1rem;
+    padding-top: 10px;
+    font-weight: 400;
 }
 
 .date-chart, .chart-info{
@@ -220,10 +229,6 @@ select{
     font-size: 0.7rem;
 }
 
-
-
-
-
 .leaflet-container{
     height: 100%;
 }
@@ -231,6 +236,7 @@ select{
 .leaflet-container span{
     color: #252B5F;
 }
+
 
 .chart-status-container{
 
@@ -245,7 +251,7 @@ select{
 }
 
 .disease-chart-container{
-
+  
 }
 
 .date-chart-container{
