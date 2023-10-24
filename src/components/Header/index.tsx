@@ -8,7 +8,7 @@ export default function Header({}: Props) {
   return (
     <div className='header'>
         <div className='section-one'>
-            <img src='logo.png'/>
+            <img src='../../../public/logo.png'/>
             <h1>Patas em Harmonia</h1>
         </div>
         <div className='section-two'>
@@ -18,7 +18,7 @@ export default function Header({}: Props) {
                 <li><Link to='/animais'>Nossos animais</Link></li>
                 <li><Link to='/perfil'>Perfil</Link></li>
             </ul>
-            <Link to='/perfil'><img src='default_profile.png'/></Link>
+            <Link to='/perfil'><img src='../../../public/default_profile.png'/></Link>
         </div>
     </div>
   )

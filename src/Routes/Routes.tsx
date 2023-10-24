@@ -8,13 +8,16 @@ import { Schedule } from "../pages/SchedulePage";
 import { Profile } from "../pages/ProfilePage";
 import { SignUp } from "../pages/SignUpPage";
 import { Login } from "../pages/LoginPage";
+import { Animal } from "../pages/animalPage";
 
 export const router = createBrowserRouter([
     { path: "/", element: <Home />},
     { path: "animal-form", element: <AnimalForm /> },
     { path: "animais", element: <Animals /> },
+    { path: "animal/:id", element: <Animal /> },
     { path: "ong-form", element: <OngForm /> },
     { path: "ongs", element: <Ongs /> },
+    { path: "ong/:id", element: <Ongs /> },
     { path: "agendar", element: <Schedule /> },
     { path: "perfil", element: <Profile /> },
     { path: "cadastro", element: <SignUp /> },
