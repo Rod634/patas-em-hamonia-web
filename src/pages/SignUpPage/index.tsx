@@ -1,4 +1,6 @@
 import * as React from 'react';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 interface ISignUpProps {
 }
@@ -6,7 +8,12 @@ interface ISignUpProps {
 export function SignUp () {
   return (
     <div>
-      SignUp
+      <Header></Header>
+      <div className='container-one'>
+
+      </div>
+      <Footer></Footer>
     </div>
   );
 }
+

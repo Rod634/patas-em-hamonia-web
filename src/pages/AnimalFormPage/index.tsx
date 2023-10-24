@@ -1,12 +1,14 @@
-import * as React from 'react';
-
-interface IAnimalsFormProps {
-}
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 export function AnimalForm () {
   return (
     <div>
-      Animal Form
+      <Header></Header>
+      <div className='container-one'>
+
+      </div>
+      <Footer></Footer>
     </div>
   );
 }

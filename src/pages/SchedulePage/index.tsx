@@ -1,12 +1,14 @@
-import * as React from 'react';
-
-interface IScheduleProps {
-}
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 export function Schedule () {
   return (
     <div>
-      Schedule
+      <Header></Header>
+      <div className='container-one'>
+
+      </div>
+      <Footer></Footer>
     </div>
   );
 }

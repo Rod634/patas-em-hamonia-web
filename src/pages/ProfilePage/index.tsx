@@ -1,12 +1,14 @@
-import * as React from 'react';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
 
-interface IProfileProps {
-}
-
-export function Profile () {
+export function Profile() {
   return (
     <div>
-      Profile
+      <Header></Header>
+      <div className='container-one'>
+
+      </div>
+      <Footer></Footer>
     </div>
   );
 }
