@@ -1,0 +1,11 @@
+.profile-info-fields-ong{
+    width: 100%;
+}
+
+.profile-section-two-ong {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    height: 50%;
+    justify-content: center;
+}
