@@ -1,0 +1,69 @@
+.container-one-login{
+    margin: auto;
+    width: 50vw;
+    height: 55vh;
+    background-color: #FEF2DF;
+    border-radius: 15px;
+    display: flex;
+    margin: 4rem auto;
+    flex-direction: column;
+}
+
+.container-one-login h1{
+    font-family: 'Kalam', cursive;
+    font-size: 2rem;
+    padding: 1rem 0 0 1rem;
+}
+
+.login-form{
+    margin: auto;
+    width: 60%;
+    height: 100%;
+}
+
+.login-form form {
+    padding-top: 7%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form form label{
+    font-family: 'Kalam', cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.login-form form input{
+    width: 100%;
+    border: none;
+    border-radius: 1rem;
+    padding: 10px;
+}
+
+.login-form-buttons{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2%;
+}
+
+.signin-button{
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    padding: 0 3% 3% 3%;
+}
+
+.signin-button img{
+    width: 2rem;
+    padding-top: 3px;
+    margin-left: 5%;
+}
+
+
+.signup-button{
+    height: 70%;
+    background-color: #F571B8;
+    color: #fff;
+}
