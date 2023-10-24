@@ -16,6 +16,8 @@ export function Profile() {
   //setUser()
 
   useEffect(() => {
+    window.scroll(0, 0);
+    
     const api = async () => {
       var data = await fetch("https://localhost:7100/v1/Animal/user?userId=8373c2fa-90e3-4fbe-93c1-0b75d28833a6&ngoId=2", {
         method: "GET"

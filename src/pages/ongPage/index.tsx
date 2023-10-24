@@ -5,6 +5,8 @@ import '../../assets/globalStyle.css'
 import './style.css'
 
 export function Ong() {
+  window.scroll(0, 0);
+  
   const location = useLocation();
   const ong = location.state.ong;
   const services = ong.services.split(', ');

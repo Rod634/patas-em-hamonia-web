@@ -46,6 +46,8 @@ export function Animal() {
   }
 
   useEffect(() => {
+    window.scroll(0, 0);
+
     const api = async () => {
       var data = await fetch("https://localhost:7100/v1/Vaccine", {
         method: "GET"

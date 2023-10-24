@@ -144,6 +144,8 @@ export function Animals() {
   }
 
   useEffect(() => {
+    window.scroll(0, 0);
+
     const api = async () => {
       var data = await fetch("https://localhost:7100/v1/Animal/all", {
         method: "GET"
