@@ -1,0 +1,47 @@
+.data-section-list-profile{
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 15px;
+    overflow-y: auto;
+    height: 75%;
+}
+
+.profile-section-one-profile{
+    display: flex;
+    width: 90%;
+    height: 40%;
+    margin: 2.5% auto 0 auto;
+}
+
+.profile-section-two-profile {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    height: 45%;
+    justify-content: center;
+}
+
+.data-section-profile{
+    margin-top: 0;
+    width: 45%;
+}
+
+.data-section-profile h1{
+    text-align: center;
+    font-family: 'Kalam', cursive;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.data-section-list-profile{
+    &::-webkit-scrollbar{
+        background-color: #E98676;
+        width: 0.7rem;
+        border-radius: 1rem;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background-color: #252B5F;
+        border-radius: 1rem;
+    }
+} 
