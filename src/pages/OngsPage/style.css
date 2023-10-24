@@ -1,0 +1,12 @@
+.chart-map-filter-ong{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    margin-top: 1.6rem;
+}
+
+.map-container-ong {
+    width: 100%;
+    height: 90%;
+    border-radius: 1rem;
+}

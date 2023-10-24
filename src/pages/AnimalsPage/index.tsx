@@ -2,6 +2,7 @@ import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { useState, useEffect } from "react";
 import MarkerClusterGroup from 'react-leaflet-cluster';
 import { Icon } from 'leaflet';
+import { useNavigate } from 'react-router-dom';
 import {
   Chart as ChartJS,
   BarElement,
@@ -53,6 +54,8 @@ export function Animals() {
   const [diseaseData, setDiseaseData] = useState<any>([]);
   const [races, setRacesFilter] = useState<any>([]);
 
+  const navigate = useNavigate();
+
   function proccessFilteredData(animais: any) {
     var filterData: any = [];
     animais.map((animal: any) => {
@@ -87,8 +90,6 @@ export function Animals() {
       }
     });
 
-    console.log(vaccines, animais);
-
     vaccine.map((v: any, index: any) => {
       animais.map((animal: any) => {
         if (animal.vaccine) {
@@ -114,8 +115,6 @@ export function Animals() {
         totalDog: 0
       }
     });
-
-    console.log(diseasesData, animais);
 
     disease.map((d: any, index: any) => {
       animais.map((animal: any) => {
@@ -222,12 +221,12 @@ export function Animals() {
 
   function animalsFilterHandler(e: any) {
     const { name, value } = e.target;
-    console.log(name, value);
     setAnimalsFilter((prevAnimalsFilter) => ({
       ...prevAnimalsFilter,
       [name]: value,
     }));
   }
+
   useEffect(() => {
     const animaisFiltrados = animals.filter((animal: any) => {
       if (animalsFilter.race && animal.race !== animalsFilter.race) {
@@ -252,8 +251,8 @@ export function Animals() {
       [name]: value,
     }));
   }
+
   useEffect(() => {
-    console.log(animalsDataFilter);
     const animaisFiltrados = animals.filter((animal: any) => {
       if (animalsDataFilter.race && animal.race !== animalsDataFilter.race) {
         return false;
@@ -272,6 +271,9 @@ export function Animals() {
     proccessDiseaseData(diseaseData, proccessedData)
   }, [animalsDataFilter]);
 
+  function openAnimalPage(animal : any){
+    navigate(`/animal/${animal.id}`, { state: {animal}})
+  }
 
   return (
     <div>
@@ -312,9 +314,9 @@ export function Animals() {
             <div className='select-section-container-content'>
               {
                 filteredAnimal.map((animal: any) => (
-                  <div className='content'>
+                  <div className='content'  onClick={() => openAnimalPage(animal)}>
                     <span>{animal.name} - {animal.species} {animal.gender == "fêmea" ? "(F)" : "(M)"} - {animal.age} {animal.age > 1 ? "ANOS" : "ANO"}</span>
-                    <img src='cross.png' />
+                    <img src='cross.png'/>
                   </div>
                 ))
               }
@@ -363,7 +365,7 @@ export function Animals() {
                 style={
                   {
                     maxHeight: '90%',
-                    padding: '20px'
+                    padding: '12px 30px 1px 30px'
                   }
                 }
               >
