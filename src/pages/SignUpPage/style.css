@@ -1,0 +1,92 @@
+.container-one-signup {
+    margin: 7% auto 4% auto;
+    width: 60vw;
+    height: 90vh;
+    background-color: #FEF2DF;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-one-signup h1 {
+    font-family: 'Kalam', cursive;
+    font-size: 2rem;
+    padding: 1rem 0 0 1rem;
+}
+
+.signup-form {
+    margin: auto;
+    width: 90%;
+    height: 100%;
+}
+
+.signup-form form {
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.signup-form-content {
+    width: 40%;
+}
+
+.signup-form form label {
+    font-family: 'Kalam', cursive;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.signup-form form span {
+    color: #F00;
+}
+
+.signup-form form input,
+.signup-form form select,
+.signup-form form textarea {
+    width: 100%;
+    border: none;
+    border-radius: 1rem;
+    padding: 10px;
+    margin: 0 0 0.7rem 0;
+}
+
+.signup-form form textarea {
+    resize: none;
+    height: 25% !important;
+}
+
+input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+    left: -46%;
+    width: 20px;
+    height: 20px;
+}
+
+.signup-form-buttons {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2%;
+}
+
+.signin-button-form-signup {
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    padding: 0 3% 2% 3%;
+}
+
+.signin-button-signup img {
+    width: 1.5rem;
+    padding-top: 5px;
+    margin-left: 5%;
+}
+
+
+.signup-button-signup {
+    height: 100%;
+    background-color: #F571B8;
+    color: #fff;
+}
