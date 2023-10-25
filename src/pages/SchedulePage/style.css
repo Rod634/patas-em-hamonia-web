@@ -1,0 +1,84 @@
+.schedule-container-one{
+    margin: 5% auto;
+    width: 55vw;
+    height: 75vh;
+    background-color: #FEF2DF;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.schedule-container-one h1{
+    font-family: 'Kalam', cursive;
+    padding: 20px;
+}
+
+.schedule-mail h2, .schedule-info-address h2, .schedule-info-contact h2, .schedule-select-content h2{
+    font-family: 'Kalam', cursive;
+}
+
+.schedule-select{
+    display: flex;
+    width: 90%;
+    margin: 1% auto;
+    justify-content: space-around;
+}
+
+.schedule-select-content{
+    width: 45%;
+}
+
+.schedule-select-content select{
+    width: 100%;
+    height: 40%;
+    border-radius: 1rem;
+    font-family: 'Kalam', cursive;
+    font-weight: bold;
+}
+
+.schedule-button{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.schedule-mail-info-section{
+    display: flex;
+    width: 90%;
+    margin: 3% auto;
+    justify-content: space-around;
+}
+
+.schedule-mail{
+    width: 45%;
+}
+
+.schedule-mail textarea{
+    resize: none;
+    height: 70% !important;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 10px;
+
+}
+
+.schedule-mail-button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+.schedule-mail-button button{
+    padding: 0;
+    width: 50%;
+}
+
+.schedule-info{
+    width: 45%;
+}
+
+.schedule-info-address{
+    margin-bottom: 5%;
+}
+
+
