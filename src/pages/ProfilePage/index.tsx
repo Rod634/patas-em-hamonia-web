@@ -9,7 +9,6 @@ export function Profile() {
   const navigate = useNavigate();
 
   const [animals, setAnimals] = useState<any>([]);
-  const [ongs, setOngs] = useState<any>([]);
   const [user, setUser] = useState<any>([]);
 
   //getUser By localStorage
