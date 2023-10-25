@@ -2,8 +2,8 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { useEffect, useState } from 'react';
 import bcrypt from 'bcryptjs'
-import './style.css';
 import { useNavigate } from 'react-router';
+import './style.css';
 
 export function SignUp() {
   const salt = bcrypt.genSaltSync(10);
