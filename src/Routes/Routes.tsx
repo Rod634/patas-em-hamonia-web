@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import { Home } from "../pages/homePage";
 import { AnimalForm } from "../pages/AnimalFormPage";
 import { Animals } from "../pages/AnimalsPage";
-import { OngForm } from "../pages/OngFormPage";
 import { Ongs } from "../pages/OngsPage";
 import { Schedule } from "../pages/SchedulePage";
 import { Profile } from "../pages/ProfilePage";
@@ -16,7 +15,6 @@ export const router = createBrowserRouter([
     { path: "animal-form", element: <AnimalForm /> },
     { path: "animais", element: <Animals /> },
     { path: "animal/:id", element: <Animal /> },
-    { path: "ong-form", element: <OngForm /> },
     { path: "ongs", element: <Ongs /> },
     { path: "ong/:id", element: <Ong /> },
     { path: "agendar", element: <Schedule /> },
