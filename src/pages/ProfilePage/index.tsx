@@ -4,15 +4,13 @@ import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import './style.css';
+import useAuth from '../../hooks/useAuth';
 
 export function Profile() {
   const navigate = useNavigate();
 
   const [animals, setAnimals] = useState<any>([]);
-  const [user, setUser] = useState<any>([]);
-
-  //getUser By localStorage
-  //setUser()
+  const { user } : any = useAuth();
 
   useEffect(() => {
     window.scroll(0, 0);
