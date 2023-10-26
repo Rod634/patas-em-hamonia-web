@@ -98,7 +98,7 @@ export function SignUp() {
               <input type="text" name='phone' required onChange={handleChange} />
               <label>Foto</label>
               <input type="text" name='photoUrl' onChange={handleChange} />
-              <label>Tem algum bixinho?<span>*</span></label>
+              <label>Tem algum bixinho?</label>
               <input className='checkbox' type='checkBox' onClick={() => { setInputs((values: any) => ({ ...values, ['hasPets']: !inputs.hasPets })) }}/>
             </div>
             <div className='signup-form-content'>

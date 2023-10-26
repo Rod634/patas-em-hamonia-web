@@ -8,11 +8,18 @@
     width: 40%;
 }
 
-.animal-form-content select {
+.animal-form-content select{
     width: 100%;
     height: 11% !important;
     border: none;
     border-radius: 1rem;
     padding: 10px;
+    margin: 0 0 0.7rem 0;
+}
+
+.multiselect{
+    width: 100%;
+    border: none;
+    border-radius: 1rem;
     margin: 0 0 0.7rem 0;
 }

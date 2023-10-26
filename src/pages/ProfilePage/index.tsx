@@ -68,6 +68,9 @@ export function Profile() {
           <Link to="/">
             <button>Voltar</button>
           </Link>
+          <Link to="/animal-form">
+            <button>Novo</button>
+          </Link>
         </div>
       </div>
       <Footer></Footer>
