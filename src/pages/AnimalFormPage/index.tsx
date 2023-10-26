@@ -11,9 +11,6 @@ import { useNavigate } from 'react-router';
 export function AnimalForm() {
   const navigate = useNavigate();
 
-  const [vaccines, setVaccines] = useState<any>([]);
-  const [disease, setDisease] = useState<any>([]);
-
   const [diseaseOptions, setDiseaseOptions] = useState<any>([]);
   const [vaccinesOptions, setVaccinesOptions] = useState<any>([]);
 
@@ -71,7 +68,6 @@ export function AnimalForm() {
       getVaccines.forEach((v: any) => {
         vaccineOptions.push({ value: v.id, label: v.name });
       });
-      setVaccines(getVaccines);
       setVaccinesOptions(vaccineOptions);
 
       var data = await fetch("https://localhost:7100/v1/Disease", {
@@ -82,7 +78,6 @@ export function AnimalForm() {
       getDiseases.forEach((d: any) => {
         diseaseOptions.push({ value: d.id, label: d.name });
       });
-      setDisease(getDiseases);
       setDiseaseOptions(diseaseOptions);
     };
 
