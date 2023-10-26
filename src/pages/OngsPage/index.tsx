@@ -41,7 +41,7 @@ export function Ongs() {
     window.scroll(0, 0);
     
     const api = async () => {
-      var data = await fetch("https://localhost:7100/v1/Ngo", {
+      var data = await fetch(`${import.meta.env.VITE_API_URL}/Ngo`, {
         method: "GET"
       });
       const ongResponse = await data.json();

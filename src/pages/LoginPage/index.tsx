@@ -19,7 +19,7 @@ export function Login() {
         password: password
       };
 
-      const response = await fetch("https://localhost:7100/v1/Access/Login", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/Access/Login`, {
         method: "POST", // or 'PUT'
         headers: {
           "Content-Type": "application/json",

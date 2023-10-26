@@ -28,7 +28,7 @@ export function SignUp() {
     window.scroll(0, 0);
 
     const api = async () => {
-      var data = await fetch("https://localhost:7100/v1/Ngo", {
+      var data = await fetch(`${import.meta.env.VITE_API_URL}/Ngo`, {
         method: "GET"
       });
       const getOngs = await data.json();
@@ -48,7 +48,7 @@ export function SignUp() {
     try {
       var body = data;
       body.password = bcrypt.hashSync(inputs.password, salt);
-      const response = await fetch("https://localhost:7100/v1/User", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/User`, {
         method: "POST", // or 'PUT'
         headers: {
           "Content-Type": "application/json",

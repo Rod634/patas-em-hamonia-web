@@ -9,9 +9,11 @@ import { useEffect, useState } from 'react';
 export function Animal() {
   const location = useLocation();
   const animal = location.state.animal;
+  console.log(animal);
 
   const [diseases, setDisease] = useState<any>([]);
   const [vaccines, setVaccine] = useState<any>([]);
+  const [userContact, setUserContact] = useState<string>("N/A");
 
   function proccessVacines(vaccineData: any) {
     if (animal.vaccineAnimals) {
@@ -24,7 +26,6 @@ export function Animal() {
           }
         });
       });
-
       setVaccine(animalVaccines);
     }
   }
@@ -35,12 +36,11 @@ export function Animal() {
 
       animal.diseaseAnimals.forEach((disease: any) => {
         diseaseData.forEach((dd: any) => {
-          if(dd.id == disease.idVaccine) {
+          if(dd.id == disease.idDisease) {
             animalDiseases.push(dd.name);
           }
         });
       });
-
       setDisease(animalDiseases);
     }
   }
@@ -49,17 +49,23 @@ export function Animal() {
     window.scroll(0, 0);
 
     const api = async () => {
-      var data = await fetch("https://localhost:7100/v1/Vaccine", {
+      var data = await fetch(`${import.meta.env.VITE_API_URL}/Vaccine`, {
         method: "GET"
       });
       const vaccineResponse = await data.json();
       proccessVacines(vaccineResponse);
 
-      var data = await fetch("https://localhost:7100/v1/Disease", {
+      var data = await fetch(`${import.meta.env.VITE_API_URL}/Disease`, {
         method: "GET"
       });
       const diseaseResponse = await data.json();
       proccessDiseases(diseaseResponse);
+
+      var data = await fetch(`${import.meta.env.VITE_API_URL}/v1/User?id=${animal.idUser}`, {
+        method: "GET"
+      });
+      const userResponse = await data.json();
+      setUserContact(userResponse.phone);
     };
 
     api();
@@ -71,7 +77,7 @@ export function Animal() {
       <div className='container-one-info-page'>
         <div className='profile-section-one'>
           <div className='profile-img'>
-            <img src={animal.photoUrl} />
+            <img src={animal.photoUrl ? animal.photoUrl : "../../../public/default_profile.png"} />
           </div>
           <div className='profile-info'>
             <h1>Nome: {animal.name}</h1>
@@ -83,12 +89,12 @@ export function Animal() {
               </div>
               <div className='info-fields-two'>
                 <p>Espécie: {animal.species}</p>
-                <p>Bairro: {animal.neighborhood}</p>
+                <p>Contato: {userContact}</p>
                 <p>Errante: {animal.errant ? "Sim" : "Não"}</p>
               </div>
             </div>
             <div className='contact-section'>
-              <p>Contatos: teste@gmail.com | (71)987711479</p>
+              <p>Localização: {animal.neighborhood}</p>
             </div>
           </div>
         </div>

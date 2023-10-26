@@ -38,10 +38,12 @@ export function Animals() {
     species: '',
   });
 
-  const [animalsDataFilter, setAnimalsDataFilter] = useState<{ race: string; gender: string; specie: string }>({
+  const [animalsDataFilter, setAnimalsDataFilter] = useState<{ race: string; gender: string; specie: string, diseaseId: number, vaccineId: number }>({
     race: '',
     gender: '',
     specie: '',
+    diseaseId: 0,
+    vaccineId: 0,
   });
 
   const [diseases, setDisease] = useState<any>([]);
@@ -147,20 +149,20 @@ export function Animals() {
     window.scroll(0, 0);
 
     const api = async () => {
-      var data = await fetch("https://localhost:7100/v1/Animal/all", {
+      var data = await fetch(`${import.meta.env.VITE_API_URL}/Animal/all`, {
         method: "GET"
       });
       const animalResponse = await data.json();
       setAnimals(animalResponse);
       setFilteredAnimal(animalResponse);
 
-      var data = await fetch("https://localhost:7100/v1/Vaccine", {
+      var data = await fetch(`${import.meta.env.VITE_API_URL}/Vaccine`, {
         method: "GET"
       });
       const vaccineResponse = await data.json();
       setVaccine(vaccineResponse);
 
-      var data = await fetch("https://localhost:7100/v1/Disease", {
+      var data = await fetch(`${import.meta.env.VITE_API_URL}/Disease`, {
         method: "GET"
       });
       const diseaseResponse = await data.json();
@@ -170,6 +172,8 @@ export function Animals() {
       processRacesData(animais);
       proccessVaccineData(vaccineResponse, animais);
       proccessDiseaseData(diseaseResponse, animais);
+
+      console.log(process.env.API_URL);
     };
 
     api();
@@ -206,12 +210,12 @@ export function Animals() {
     datasets: [
       {
         label: 'Gato',
-        data: vaccineData.map((v: any) => { return v.totalCat }),
+        data: diseaseData.map((v: any) => { return v.totalCat }),
         backgroundColor: '#E98676',
       },
       {
         label: 'Cachorro',
-        data: vaccineData.map((v: any) => { return v.totalDog }),
+        data: diseaseData.map((v: any) => { return v.totalDog }),
         backgroundColor: '#252B5F',
       }
     ]
@@ -263,6 +267,12 @@ export function Animals() {
         return false;
       }
       if (animalsDataFilter.specie && animal.species !== animalsDataFilter.specie) {
+        return false;
+      }
+      if (animalsDataFilter.diseaseId && !animal.diseaseAnimals.some((disease : any) => disease.idDisease == animalsDataFilter.diseaseId) ) {
+        return false;
+      }
+      if (animalsDataFilter.vaccineId && !animal.vaccineAnimals.some((disease : any) => disease.idVaccine == animalsDataFilter.vaccineId) ) {
         return false;
       }
       return true;
@@ -352,6 +362,28 @@ export function Animals() {
               {
                 races.map((r: any) => (
                   <option value={r}>{r}</option>
+                ))
+              }
+            </select>
+          </div>
+          <div className='chart-map-fields'>
+            <p>Vacina</p>
+            <select name="vaccineId" value={animalsDataFilter.vaccineId} onChange={animalsDataFilterHandler}>
+              <option value={''}>Todas</option>
+              {
+                vaccine.map((v: any) => (
+                  <option value={v.id}>{v.name}</option>
+                ))
+              }
+            </select>
+          </div>
+          <div className='chart-map-fields'>
+            <p>Doença</p>
+            <select name="diseaseId" value={animalsDataFilter.diseaseId} onChange={animalsDataFilterHandler}>
+              <option value={''}>Todas</option>
+              {
+                diseases.map((d: any) => (
+                  <option value={d.id}>{d.name}</option>
                 ))
               }
             </select>

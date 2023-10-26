@@ -17,7 +17,7 @@ export function Ong() {
       <div className='container-one-info-page'>
         <div className='profile-section-one'>
           <div className='profile-img'>
-            <img src={ong.photoUrl} />
+            <img src={ong.photoUrl ? ong.photoUrl : "../../../public/default_profile.png"} />
           </div>
           <div className='profile-info'>
             <h1>Nome: {ong.name}</h1>

@@ -6,9 +6,11 @@ import Autocomplete from "react-google-autocomplete";
 
 import './style.css';
 import { useNavigate } from 'react-router';
+import useAuth from '../../hooks/useAuth';
 
 
 export function AnimalForm() {
+  const { user } : any = useAuth();
   const navigate = useNavigate();
 
   const [diseaseOptions, setDiseaseOptions] = useState<any>([]);
@@ -60,7 +62,7 @@ export function AnimalForm() {
     window.scroll(0, 0);
 
     const api = async () => {
-      var data = await fetch("https://localhost:7100/v1/Vaccine", {
+      var data = await fetch(`${import.meta.env.VITE_API_URL}/Vaccine`, {
         method: "GET"
       });
       const getVaccines = await data.json();
@@ -70,7 +72,7 @@ export function AnimalForm() {
       });
       setVaccinesOptions(vaccineOptions);
 
-      var data = await fetch("https://localhost:7100/v1/Disease", {
+      var data = await fetch(`${import.meta.env.VITE_API_URL}/Disease`, {
         method: "GET"
       });
       const getDiseases = await data.json();
@@ -86,7 +88,7 @@ export function AnimalForm() {
 
   async function postAnimal(data: any) {
     try {
-      const response = await fetch("https://localhost:7100/v1/Animal", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/Animal`, {
         method: "POST", // or 'PUT'
         headers: {
           "Content-Type": "application/json",
@@ -123,9 +125,8 @@ export function AnimalForm() {
 
       data.latitudeLongitude = `${address.geometry.location.lat()}, ${address.geometry.location.lng()}`;
       data.neighborhood = address.formatted_address;
-
-      data.idUser = "a78b7c4e-41c3-4e64-9454-286928187d3d";
-      data.ngoId = "195f946d-be78-4527-896b-0274462f4b6f";
+      data.idUser = user.id;
+      data.ngoId = user.ngoId;
 
       postAnimal(data);
     } catch (err) {
@@ -189,7 +190,7 @@ export function AnimalForm() {
               />
               <label>Localização<span>*</span></label>
               <Autocomplete
-                apiKey={""}
+                apiKey={import.meta.env.VITE_GOOGLE_API_KEY}
                 onPlaceSelected={(place) => setSelectedAddress(place)}
                 options={optionsMap}
               />

@@ -10,13 +10,13 @@ export function Profile() {
   const navigate = useNavigate();
 
   const [animals, setAnimals] = useState<any>([]);
-  const { user } : any = useAuth();
+  const { user, signout } : any = useAuth();
 
   useEffect(() => {
     window.scroll(0, 0);
     
     const api = async () => {
-      var data = await fetch("https://localhost:7100/v1/Animal/user?userId=8373c2fa-90e3-4fbe-93c1-0b75d28833a6&ngoId=2", {
+      var data = await fetch(`${import.meta.env.VITE_API_URL}/Animal/user?userId=${user.id}&ngoId=${user.ngoId}`, {
         method: "GET"
       });
       const getAnimals = await data.json();
@@ -68,6 +68,9 @@ export function Profile() {
           </Link>
           <Link to="/animal-form">
             <button>Novo</button>
+          </Link>
+          <Link to="/Login">
+            <button onClick={signout} >Sair</button>
           </Link>
         </div>
       </div>
