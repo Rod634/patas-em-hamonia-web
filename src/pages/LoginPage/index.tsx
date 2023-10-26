@@ -3,8 +3,10 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { useNavigate } from "react-router";
 import './style.css';
+import useAuth from "../../hooks/useAuth";
 
 export function Login() {
+  const { signin } : any = useAuth();
   const navigate = useNavigate();
 
   const [email, setEmail] = useState<string>("");
@@ -27,6 +29,9 @@ export function Login() {
   
       const result = await response.status;
       if(result == 200){
+        const user = await response.json();
+        console.log(user);
+        signin(user);
         navigate('/');
       }else{
         alert("Verifique seu email e senha");
