@@ -29,4 +29,4 @@ export const router = createBrowserRouter([
   { path: "perfil", element: <Private Item={Profile} /> },
   { path: "cadastro", element: <SignUp /> },
   { path: "login", element: <Login /> },
-]);
+], {basename: "/patas-em-hamonia-web"});
