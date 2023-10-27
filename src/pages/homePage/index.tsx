@@ -10,16 +10,16 @@ export function Home() {
       <Header></Header>
       <div className='container-one'>
         <div className='image-box'>
-          <img src='image_3.png' />
+          <img src='/patas-em-hamonia-web/image_3.png' />
         </div>
         <div className='info-box'>
           <div className='title'>
             <h1>Patas em Harmonia</h1>
-            <img src="Vector_1.png" />
+            <img src="/patas-em-hamonia-web/Vector_1.png" />
           </div>
           <div className='info-title'>
             <h1>Nosso <span>AU</span>bjetivo</h1>
-            <img src="paw_1.png" />
+            <img src="/patas-em-hamonia-web/paw_1.png" />
           </div>
           <div className='info-text'>
             <p>
@@ -44,7 +44,7 @@ export function Home() {
           <div className='info-box-one'>
             <div className='info-title'>
               <h1>Nossos Ani<span>miaus</span></h1>
-              <img src="paw_1.png" />
+              <img src="/patas-em-hamonia-web/paw_1.png" />
             </div>
             <div className='info-text'>
               <p>
@@ -63,18 +63,18 @@ export function Home() {
             </div>
           </div>
           <div className='box-one-img'>
-            <img src="image_5.png" />
+            <img src="/patas-em-hamonia-web/image_5.png" />
           </div>
         </div>
 
         <div className='box-two'>
           <div className='box-two-img'>
-            <img src="image_1.png" />
+            <img src="/patas-em-hamonia-web/image_1.png" />
           </div>
           <div className='info-box-two'>
             <div className='info-title'>
               <h1>Nossos P<span>rouf</span>jetos de Castração</h1>
-              <img src="paw_1.png" />
+              <img src="/patas-em-hamonia-web/paw_1.png" />
             </div>
             <div className='info-text'>
               <p>
