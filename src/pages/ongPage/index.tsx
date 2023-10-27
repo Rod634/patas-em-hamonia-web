@@ -17,7 +17,7 @@ export function Ong() {
       <div className='container-one-info-page'>
         <div className='profile-section-one'>
           <div className='profile-img'>
-            <img src={ong.photoUrl ? ong.photoUrl : "/patas-em-hamonia-web/public/default_profile.png"} />
+            <img src={ong.photoUrl ? ong.photoUrl : "/patas-em-hamonia-web/default_profile.png"} />
           </div>
           <div className='profile-info'>
             <h1>Nome: {ong.name}</h1>

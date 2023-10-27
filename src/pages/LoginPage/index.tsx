@@ -61,7 +61,7 @@ export function Login() {
         </div>
         <div className="login-form-buttons">
           <button className="signup-button" onClick={() => navigate("/cadastro")}>Cadastrar</button>
-          <button className="signin-button" form="login-form">Entrar <img src="/patas-em-hamonia-web/public/paw_button.png" /></button>
+          <button className="signin-button" form="login-form">Entrar <img src="/patas-em-hamonia-web/paw_button.png" /></button>
         </div>
       </div>
       <Footer></Footer>

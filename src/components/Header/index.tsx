@@ -9,7 +9,7 @@ export default function Header({ }: Props) {
     <div className='header'>
       <div className='section-one'>
         <Link to='/'>
-          <img src='/patas-em-hamonia-web/public/logo.png' />
+          <img src='/patas-em-hamonia-web/logo.png' />
           <h1>Patas em Harmonia</h1>
         </Link>
       </div>
@@ -20,7 +20,7 @@ export default function Header({ }: Props) {
           <li><Link to='/animais'>Nossos animais</Link></li>
           <li><Link to='/perfil'>Perfil</Link></li>
         </ul>
-        <Link to='/perfil'><img src='/patas-em-hamonia-web/public/default_profile.png' /></Link>
+        <Link to='/perfil'><img src='/patas-em-hamonia-web/default_profile.png' /></Link>
       </div>
     </div>
   )
