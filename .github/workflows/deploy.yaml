@@ -6,9 +6,9 @@ on:
       - master
 
 env:
-  VITE_API_URL: ${{ secrets.GITHUB_TOKEN }}
-  VITE_GOOGLE_API_KEY: ${{ secrets.GITHUB_TOKEN }}
-  VITE_BLIP_API_KEY:  ${{ secrets.GITHUB_TOKEN }}
+  VITE_API_URL: ${{ secrets.VITE_API_URL }}
+  VITE_GOOGLE_API_KEY: ${{ secrets.VITE_GOOGLE_API_KEY }}
+  VITE_BLIP_API_KEY:  ${{ secrets.VITE_BLIP_API_KEY }}
 
 jobs:
   build:
