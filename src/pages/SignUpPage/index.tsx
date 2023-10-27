@@ -121,7 +121,7 @@ export function SignUp() {
         </div>
         <div className="signup-form-buttons">
           <button className="signup-button-signup" onClick={redirectToLogin}>Login</button>
-          <button className="signin-button-signup" form='signup-form'>Cadastrar<img src="../../../public/paw_button.png" /></button>
+          <button className="signin-button-signup" form='signup-form'>Cadastrar<img src="/patas-em-hamonia-web/public/paw_button.png" /></button>
         </div>
       </div>
       <Footer></Footer>

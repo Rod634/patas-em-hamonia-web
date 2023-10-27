@@ -36,7 +36,7 @@ export function Profile() {
       <div className='container-one-profile-page'>
         <div className='profile-section-one-profile'>
           <div className='profile-img'>
-            <img src={user.photoUrl ? user.photoUrl : "../../../public/default_profile.png"} />
+            <img src={user.photoUrl ? user.photoUrl : "/patas-em-hamonia-web/public/default_profile.png"} />
           </div>
           <div className='profile-info'>
             <h1>Nome: {user.name}</h1>

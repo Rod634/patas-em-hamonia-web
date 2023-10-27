@@ -57,7 +57,7 @@ select{
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: url('../../../public/arrow.png') no-repeat center right #FFF;
+    background: url('/patas-em-hamonia-web/public/arrow.png') no-repeat center right #FFF;
     border: none;
     font-size: 13px;
     width: 65%;

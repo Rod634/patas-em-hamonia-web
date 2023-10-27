@@ -77,7 +77,7 @@ export function Animal() {
       <div className='container-one-info-page'>
         <div className='profile-section-one'>
           <div className='profile-img'>
-            <img src={animal.photoUrl ? animal.photoUrl : "../../../public/default_profile.png"} />
+            <img src={animal.photoUrl ? animal.photoUrl : "/patas-em-hamonia-web/public/default_profile.png"} />
           </div>
           <div className='profile-info'>
             <h1>Nome: {animal.name}</h1>
