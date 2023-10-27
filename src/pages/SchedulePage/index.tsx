@@ -21,21 +21,31 @@ export function Schedule() {
   useEffect(() => {
     window.scroll(0, 0);
 
-    const api = async () => {
-      var data = await fetch(`${import.meta.env.VITE_API_URL}/Animal/user?userId=${user.id}&ngoId=${user.ngoId}`, {
-        method: "GET"
-      });
-      const getAnimals = await data.json();
-      setAnimals(getAnimals);
+    try{
+      const api = async () => {
+        var data = await fetch(`${import.meta.env.VITE_API_URL}/Animal/user?userId=${user.id}&ngoId=${user.ngoId}`, {
+          method: "GET"
+        });
+        const getAnimals = await data.json();
+        const status = await data.status;
+        if(status != 200){
+          redirectToAnimalForm();
+        }
+        setAnimals(getAnimals);
+  
+        var data = await fetch(`${import.meta.env.VITE_API_URL}/Ngo`, {
+          method: "GET"
+        });
+        const getOngs = await data.json();
+        setOngs(getOngs);
+      };
+      api();
+    }catch(err){
+      
+    }
+    
 
-      var data = await fetch(`${import.meta.env.VITE_API_URL}/Ngo`, {
-        method: "GET"
-      });
-      const getOngs = await data.json();
-      setOngs(getOngs);
-    };
-
-    api();
+    
   }, []);
 
   function handleChange(event: any) {
@@ -49,6 +59,11 @@ export function Schedule() {
     }
   }
 
+  function redirectToAnimalForm() {
+    alert("Para agendar uma castração você precisa cadastrar um bixinho");
+    navigate('/animal-form');
+  }
+
   function proccessEmailTxt(animal: any) {
     const emailTxt = `Olá envio esse email para solicitar uma Castração para o seguinte animal (${animal.species})`
       + `\n\nNome:${animal.name}`
@@ -60,9 +75,9 @@ export function Schedule() {
     setEmailText(emailTxt);
   }
 
-  async function sendMail(e? : any) {
+  async function sendMail(e?: any) {
 
-    if(e) e.preventDefault();
+    if (e) e.preventDefault();
 
     const email = user.email.replace("@", "%40");
     const data = {
@@ -90,8 +105,8 @@ export function Schedule() {
 
   async function setScheduleStatusAnimal() {
 
-    
-    
+
+
     if (selectedAnimal) {
       var data = {
         idAnimal: selectedAnimal.id,
@@ -127,56 +142,62 @@ export function Schedule() {
 
   return (
     <div>
-      <Header></Header>
-      <form className='schedule-container-one' onSubmit={sendMail}>
-        <h1>Agendar Castração</h1>
-        <div className='schedule-select'>
-          <div className='schedule-select-content'>
-            <h2>Bixinho</h2>
-            <select name="animal" onChange={handleChange} required>
-              <option value={''}>Selecione um animal</option>
-              {animals.map((animal: any) => (
-                <option value={JSON.stringify(animal)}>{animal.name} - {animal.species} {animal.gender == "fêmea" ? "(F)" : "(M)"} - {animal.age} {animal.age > 1 ? "ANOS" : "ANO"}</option>
-              ))}
-            </select>
-          </div>
-          <div className='schedule-select-content'>
-            <h2>Ongs Disponíveis</h2>
-            <select name="ong" onChange={handleChange} required>
-              <option value={''}>Selecione uma ong</option>
-              {ongs.map((ong: any) => (
-                <option value={JSON.stringify(ong)} >{ong.name}</option>
-              ))}
-            </select>
-          </div>
-        </div>
-        <div className='schedule-button'>
-          <button>Agendado!</button>
-        </div>
-        <div className='schedule-mail-info-section'>
-          <div className='schedule-mail'>
-            <h2>E-mail</h2>
-            <textarea value={emailText} onChange={(e) => setEmailText(e.target.value)} />
-            <div className='schedule-mail-button'>
-              <button>Enviar</button>
-            </div>
-          </div>
-          {selectedOng.id ?
-            <div className='schedule-info'>
-              <div className='schedule-info-address'>
-                <h2>Endereço</h2>
-                <p>{selectedOng.address}</p>
+      {
+        animals.length > 0 ?
+          <div>
+            <Header></Header>
+            <form className='schedule-container-one' onSubmit={sendMail}>
+              <h1>Agendar Castração</h1>
+              <div className='schedule-select'>
+                <div className='schedule-select-content'>
+                  <h2>Bixinho</h2>
+                  <select name="animal" onChange={handleChange} required>
+                    <option value={''}>Selecione um animal</option>
+                    {animals.map((animal: any) => (
+                      <option value={JSON.stringify(animal)}>{animal.name} - {animal.species} {animal.gender == "fêmea" ? "(F)" : "(M)"} - {animal.age} {animal.age > 1 ? "ANOS" : "ANO"}</option>
+                    ))}
+                  </select>
+                </div>
+                <div className='schedule-select-content'>
+                  <h2>Ongs Disponíveis</h2>
+                  <select name="ong" onChange={handleChange} required>
+                    <option value={''}>Selecione uma ong</option>
+                    {ongs.map((ong: any) => (
+                      <option value={JSON.stringify(ong)} >{ong.name}</option>
+                    ))}
+                  </select>
+                </div>
               </div>
-              <div className='schedule-info-contact'>
-                <h2>Contatos</h2>
-                <p>Email: {selectedOng.email}</p>
-                <p>Telefone: {selectedOng.phone}</p>
+              <div className='schedule-button'>
+                <button>Agendado!</button>
               </div>
-            </div> : <></>
-          }
-        </div>
-      </form>
-      <Footer></Footer>
+              <div className='schedule-mail-info-section'>
+                <div className='schedule-mail'>
+                  <h2>E-mail</h2>
+                  <textarea value={emailText} onChange={(e) => setEmailText(e.target.value)} />
+                  <div className='schedule-mail-button'>
+                    <button>Enviar</button>
+                  </div>
+                </div>
+                {selectedOng.id ?
+                  <div className='schedule-info'>
+                    <div className='schedule-info-address'>
+                      <h2>Endereço</h2>
+                      <p>{selectedOng.address}</p>
+                    </div>
+                    <div className='schedule-info-contact'>
+                      <h2>Contatos</h2>
+                      <p>Email: {selectedOng.email}</p>
+                      <p>Telefone: {selectedOng.phone}</p>
+                    </div>
+                  </div> : <></>
+                }
+              </div>
+            </form>
+            <Footer></Footer>
+          </div>
+          : <></>
+      }
     </div>
   );
 }
