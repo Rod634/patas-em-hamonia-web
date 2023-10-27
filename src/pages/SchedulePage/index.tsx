@@ -60,7 +60,10 @@ export function Schedule() {
     setEmailText(emailTxt);
   }
 
-  async function sendMail() {
+  async function sendMail(e? : any) {
+
+    if(e) e.preventDefault();
+
     const email = user.email.replace("@", "%40");
     const data = {
       "id": "1294447a-2581-4597-be6a-a5dff33af157",
@@ -86,6 +89,9 @@ export function Schedule() {
   }
 
   async function setScheduleStatusAnimal() {
+
+    
+    
     if (selectedAnimal) {
       var data = {
         idAnimal: selectedAnimal.id,
@@ -122,13 +128,13 @@ export function Schedule() {
   return (
     <div>
       <Header></Header>
-      <div className='schedule-container-one'>
+      <form className='schedule-container-one' onSubmit={sendMail}>
         <h1>Agendar Castração</h1>
         <div className='schedule-select'>
           <div className='schedule-select-content'>
             <h2>Bixinho</h2>
-            <select name="animal" onChange={handleChange}>
-              <option value={''}>Animais</option>
+            <select name="animal" onChange={handleChange} required>
+              <option value={''}>Selecione um animal</option>
               {animals.map((animal: any) => (
                 <option value={JSON.stringify(animal)}>{animal.name} - {animal.species} {animal.gender == "fêmea" ? "(F)" : "(M)"} - {animal.age} {animal.age > 1 ? "ANOS" : "ANO"}</option>
               ))}
@@ -136,8 +142,8 @@ export function Schedule() {
           </div>
           <div className='schedule-select-content'>
             <h2>Ongs Disponíveis</h2>
-            <select name="ong" onChange={handleChange}>
-              <option value={''}>Ongs</option>
+            <select name="ong" onChange={handleChange} required>
+              <option value={''}>Selecione uma ong</option>
               {ongs.map((ong: any) => (
                 <option value={JSON.stringify(ong)} >{ong.name}</option>
               ))}
@@ -145,14 +151,14 @@ export function Schedule() {
           </div>
         </div>
         <div className='schedule-button'>
-          <button onClick={setScheduleStatusAnimal}>Agendado!</button>
+          <button>Agendado!</button>
         </div>
         <div className='schedule-mail-info-section'>
           <div className='schedule-mail'>
             <h2>E-mail</h2>
             <textarea value={emailText} onChange={(e) => setEmailText(e.target.value)} />
             <div className='schedule-mail-button'>
-              <button onClick={sendMail} >Enviar</button>
+              <button>Enviar</button>
             </div>
           </div>
           {selectedOng.id ?
@@ -169,7 +175,7 @@ export function Schedule() {
             </div> : <></>
           }
         </div>
-      </div>
+      </form>
       <Footer></Footer>
     </div>
   );
