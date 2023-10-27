@@ -102,7 +102,7 @@ export function SignUp() {
               <input className='checkbox' type='checkBox' onClick={() => { setInputs((values: any) => ({ ...values, ['hasPets']: !inputs.hasPets })) }}/>
             </div>
             <div className='signup-form-content'>
-              <label>Nome da Ong<span>*</span></label>
+              <label>Nome da Ong</label>
               <select name="ngoId" onChange={handleChange}>
                 <option value={''}>Nenhuma</option>
                 {ongs.map((ong: any) => (

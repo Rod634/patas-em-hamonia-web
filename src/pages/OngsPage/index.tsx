@@ -65,7 +65,6 @@ export function Ongs() {
 
   function ongMapFilterHandler(e: any) {
     const filteredData = getFilteredData(e.target.value);
-    console.log(filteredData);
     setFilteredOngsMap(filteredData);
   }
 

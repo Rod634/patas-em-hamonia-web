@@ -9,7 +9,6 @@ import { useEffect, useState } from 'react';
 export function Animal() {
   const location = useLocation();
   const animal = location.state.animal;
-  console.log(animal);
 
   const [diseases, setDisease] = useState<any>([]);
   const [vaccines, setVaccine] = useState<any>([]);
