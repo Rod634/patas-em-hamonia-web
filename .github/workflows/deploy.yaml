@@ -5,6 +5,11 @@ on:
     branches:
       - master
 
+env:
+  VITE_API_URL: ${{ secrets.GITHUB_TOKEN }}
+  VITE_GOOGLE_API_KEY: ${{ secrets.GITHUB_TOKEN }}
+  VITE_BLIP_API_KEY:  ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   build:
     name: Build
