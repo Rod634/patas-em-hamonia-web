@@ -153,7 +153,7 @@ export function AnimalForm() {
                 options={genderOptions}
                 onChange={(item: any) => setInputs((values: any) => ({ ...values, ['gender']: item.value }))}
                 styles={{
-                  control: (baseStyles, state) => ({
+                  control: (baseStyles) => ({
                     ...baseStyles,
                     borderRadius: '1rem',
                   }),
@@ -167,7 +167,7 @@ export function AnimalForm() {
                 options={diseaseOptions}
                 onChange={(item: any) => setSelectedDisease(item)}
                 styles={{
-                  control: (baseStyles, state) => ({
+                  control: (baseStyles) => ({
                     ...baseStyles,
                     borderRadius: '1rem',
                   }),
@@ -186,7 +186,7 @@ export function AnimalForm() {
                 options={speciesOptions}
                 onChange={(item: any) => setInputs((values: any) => ({ ...values, ['species']: item.value }))}
                 styles={{
-                  control: (baseStyles, state) => ({
+                  control: (baseStyles) => ({
                     ...baseStyles,
                     borderRadius: '1rem',
                   }),
@@ -202,7 +202,7 @@ export function AnimalForm() {
                 options={vaccinesOptions}
                 onChange={(item: any) => setSelectedVaccines(item)}
                 styles={{
-                  control: (baseStyles, state) => ({
+                  control: (baseStyles) => ({
                     ...baseStyles,
                     borderRadius: '1rem',
                   }),
