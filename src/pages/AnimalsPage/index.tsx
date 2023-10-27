@@ -172,8 +172,6 @@ export function Animals() {
       processRacesData(animais);
       proccessVaccineData(vaccineResponse, animais);
       proccessDiseaseData(diseaseResponse, animais);
-
-      console.log(process.env.API_URL);
     };
 
     api();

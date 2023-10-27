@@ -24,7 +24,7 @@ export function AnimalForm() {
   const [inputs, setInputs] = useState<any>({
     name: '',
     age: 0,
-    race: '',
+    race: 'SRD',
     species: '',
     gender: '',
     errant: false,
@@ -146,7 +146,7 @@ export function AnimalForm() {
               <label>Nome<span>*</span></label>
               <input type="text" name='name' onChange={handleChange} required />
               <label>Raça<span>*</span></label>
-              <input type="text" name='race' onChange={handleChange} required />
+              <input type="text" name='race' onChange={handleChange} required value={inputs.race} />
               <label>Sexo<span>*</span></label>
               <Select
                 closeMenuOnSelect={true}
