@@ -61,7 +61,7 @@ export function Animal() {
       const diseaseResponse = await data.json();
       proccessDiseases(diseaseResponse);
 
-      var data = await fetch(`${import.meta.env.VITE_API_URL}/v1/User?id=${animal.idUser}`, {
+      var data = await fetch(`${import.meta.env.VITE_API_URL}/User?id=${animal.idUser}`, {
         method: "GET"
       });
       const userResponse = await data.json();

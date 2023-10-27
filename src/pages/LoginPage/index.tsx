@@ -30,7 +30,6 @@ export function Login() {
       const result = await response.status;
       if(result == 200){
         const user = await response.json();
-        console.log(user);
         signin(user);
         navigate('/');
       }else{
