@@ -151,8 +151,13 @@ export function AnimalForm() {
               <Select
                 closeMenuOnSelect={true}
                 options={genderOptions}
-                className='multiselect'
                 onChange={(item: any) => setInputs((values: any) => ({ ...values, ['gender']: item.value }))}
+                styles={{
+                  control: (baseStyles, state) => ({
+                    ...baseStyles,
+                    borderRadius: '1rem',
+                  }),
+                }}
                 required
               />
               <label>Doenças</label>
@@ -160,8 +165,13 @@ export function AnimalForm() {
                 closeMenuOnSelect={false}
                 isMulti
                 options={diseaseOptions}
-                className='multiselect'
                 onChange={(item: any) => setSelectedDisease(item)}
+                styles={{
+                  control: (baseStyles, state) => ({
+                    ...baseStyles,
+                    borderRadius: '1rem',
+                  }),
+                }}
               />
               <label>De rua?</label>
               <input className='checkbox' type='checkBox' onClick={() => { setInputs((values: any) => ({ ...values, ['errant']: !inputs.errant })) }} />
@@ -174,8 +184,13 @@ export function AnimalForm() {
               <Select
                 closeMenuOnSelect={true}
                 options={speciesOptions}
-                className='multiselect'
                 onChange={(item: any) => setInputs((values: any) => ({ ...values, ['species']: item.value }))}
+                styles={{
+                  control: (baseStyles, state) => ({
+                    ...baseStyles,
+                    borderRadius: '1rem',
+                  }),
+                }}
                 required
               />
               <label>Foto URL</label>
@@ -185,8 +200,13 @@ export function AnimalForm() {
                 closeMenuOnSelect={false}
                 isMulti
                 options={vaccinesOptions}
-                className='multiselect'
                 onChange={(item: any) => setSelectedVaccines(item)}
+                styles={{
+                  control: (baseStyles, state) => ({
+                    ...baseStyles,
+                    borderRadius: '1rem',
+                  }),
+                }}
               />
               <label>Localização<span>*</span></label>
               <Autocomplete
