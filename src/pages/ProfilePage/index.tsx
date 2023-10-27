@@ -33,7 +33,7 @@ export function Profile() {
   return (
     <div>
       <Header></Header>
-      <div className='container-one-info-page'>
+      <div className='container-one-profile-page'>
         <div className='profile-section-one-profile'>
           <div className='profile-img'>
             <img src={user.photoUrl ? user.photoUrl : "../../../public/default_profile.png"} />
@@ -62,7 +62,7 @@ export function Profile() {
             </div>
           </div>
         </div>
-        <div className='back-button'>
+        <div className='profile-btns'>
           <Link to="/">
             <button>Voltar</button>
           </Link>
