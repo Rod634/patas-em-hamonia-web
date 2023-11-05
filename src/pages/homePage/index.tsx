@@ -23,12 +23,13 @@ export function Home() {
           </div>
           <div className='info-text'>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum vehicula fermentum magna, a viverra ipsum
-              blandit nec. Phasellus tincidunt ultricies pellentesque.
-              Aenean eu metus id felis vestibulum sodales hendrerit quis nunc.
-              Suspendisse potenti. Aliquam erat volutpat. Sed ex massa,
-              pulvinar in sem dictum, pharetra tristique turpis.
+              O "Patas em Harmonia" tem como missão principal combater o excesso de cães e gatos nas ruas,
+              promovendo seu bem-estar e melhorando a qualidade de vida das comunidades. Nossa plataforma
+              simplifica o processo de castração, conectando cuidadores de animais e projetos de esterilização,
+              tornando-o mais acessível. Acreditamos que ao facilitar o controle populacional e prevenir
+              doenças zoonóticas, podemos reduzir o abandono de animais. Estamos comprometidos em construir
+              uma comunidade mais responsável e compassiva, onde o cuidado com os animais é uma prioridade,
+              e convidamos todos a se juntarem a nós nessa jornada em busca de uma convivência harmônica entre humanos e animais.
             </p>
           </div>
           <div className='button'>
@@ -48,12 +49,10 @@ export function Home() {
             </div>
             <div className='info-text'>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vestibulum vehicula fermentum magna, a viverra ipsum
-                blandit nec. Phasellus tincidunt ultricies pellentesque.
-                Aenean eu metus id felis vestibulum sodales hendrerit quis nunc.
-                Suspendisse potenti. Aliquam erat volutpat. Sed ex massa,
-                pulvinar in sem dictum, pharetra tristique turpis.
+                "Nossos Animais" é o coração do "Patas em Harmonia." Aqui,
+                você encontrará uma coleção de cães e gatos encantadores que estão em busca de cuidados.
+                Nossa plataforma reúne esses animais que foram cadastrados por cuidadores, projetos
+                de proteção e ONGs em um esforço para garantir que eles encontrem o suporte necessário.
               </p>
             </div>
             <div className='button-one'>
@@ -78,18 +77,19 @@ export function Home() {
             </div>
             <div className='info-text'>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vestibulum vehicula fermentum magna, a viverra ipsum
-                blandit nec. Phasellus tincidunt ultricies pellentesque.
-                Aenean eu metus id felis vestibulum sodales hendrerit quis nunc.
-                Suspendisse potenti. Aliquam erat volutpat. Sed ex massa,
-                pulvinar in sem dictum, pharetra tristique turpis.
+                "Nossos Projetos de Castração" representam nossa dedicação ao controle populacional responsável
+                de cães e gatos. Aqui, você encontrará informações detalhadas sobre os esforços de castração
+                conduzidos por projetos de proteção animal e ONGs. Nossa plataforma visa apoiar e promover
+                esses projetos, tornando o processo de esterilização mais acessível e eficaz.
+                Ao explorar essa seção, você descobrirá como essas iniciativas estão fazendo a
+                diferença na comunidade e como você pode se envolver. Junte-se a nós na missão de
+                garantir um futuro mais brilhante e mais humano para os animais.
               </p>
             </div>
             <div className='button-two'>
-            <Link to="/ongs">
-              <button>Nossos Projetos</button>
-            </Link>
+              <Link to="/ongs">
+                <button>Nossos Projetos</button>
+              </Link>
             </div>
           </div>
         </div>

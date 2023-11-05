@@ -67,7 +67,7 @@ export function Profile() {
             <button>Voltar</button>
           </Link>
           <Link to="/animal-form">
-            <button>Novo</button>
+            <button>Novo animal</button>
           </Link>
           <Link to="/Login">
             <button onClick={signout} >Sair</button>
