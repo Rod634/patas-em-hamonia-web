@@ -19,12 +19,12 @@ const Private = ({ Item }: any) => {
 };
 
 export const router = createBrowserRouter([
-  { path: "/", element: <Private Item={Home} /> },
+  { path: "/", element: <Home/> },
   { path: "animal-form", element: <Private Item={AnimalForm} /> },
-  { path: "animais", element: <Private Item={Animals} /> },
-  { path: "animal/:id", element: <Private Item={Animal} /> },
-  { path: "ongs", element: <Private Item={Ongs} /> },
-  { path: "ong/:id", element: <Private Item={Ong} /> },
+  { path: "animais", element: <Animals/> },
+  { path: "animal/:id", element: <Animal/> },
+  { path: "ongs", element: <Ongs/> },
+  { path: "ong/:id", element: <Ong/> },
   { path: "agendar", element: <Private Item={Schedule} /> },
   { path: "perfil", element: <Private Item={Profile} /> },
   { path: "cadastro", element: <SignUp /> },

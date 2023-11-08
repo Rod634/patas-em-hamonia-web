@@ -114,7 +114,7 @@ export function SignUp() {
               <input type="text" name='emailConf' required onChange={handleChange} />
               <label>Confirmar Senha<span>*</span></label>
               <input type="password" name='passwrdConf' required onChange={handleChange} />
-              <label>Informação Adicional<span>*</span></label>
+              <label>Informação Adicional</label>
               <textarea name='aditionalInfo' onChange={handleChange} />
             </div>
           </form>
